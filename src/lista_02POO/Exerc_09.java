@@ -1,0 +1,60 @@
+package lista_02POO;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+import entities_Lista02POO.Funcionario2;
+
+public class Exerc_09 {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        List<Funcionario2> funcionarios = new ArrayList<>();
+
+        System.out.print("Quantos empregados serão cadastrados? ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println("\nEmpregado #" + i + ": ");
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+
+            System.out.print("Nome: ");
+            String nome = sc.nextLine();
+
+            System.out.print("Salário: ");
+            double salario = sc.nextDouble();
+
+            funcionarios.add(new Funcionario2(id, nome, salario));
+        }
+
+        System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");
+        int idAumento = sc.nextInt();
+
+        Funcionario2 emp = funcionarios.stream()
+                .filter(x -> x.getId() == idAumento)
+                .findFirst()
+                .orElse(null);
+
+        if (emp == null) {
+            System.out.println("Este id não existe!");
+        } else {
+            System.out.print("Informe o percentual: ");
+            double percentual = sc.nextDouble();
+            emp.aumentarSalario(percentual);
+        }
+
+        System.out.println("\nLista de Empregados:");
+        for (Funcionario2 f : funcionarios) {
+            System.out.println(f);
+        }
+        sc.close();
+
+    }
+
+    public static boolean hasId(List<Funcionario2> list, int id) {
+        return list.stream().anyMatch(x -> x.getId() == id);
+    }
+
+}
