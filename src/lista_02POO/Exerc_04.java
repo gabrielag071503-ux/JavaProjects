@@ -24,13 +24,13 @@ public class Exerc_04 {
 
         Estudante estudante = new Estudante(nome, nota1, nota2, nota3);
 
-        System.out.printf("Nota Final: %.2f%n", estudante.notaFinal());
+        System.out.printf("Nota Final: %.2f%n", estudante.getNotaFinal());
 
-        if(estudante.notaFinal() >= 60.0) {
+        if(estudante.getNotaFinal() >= 60.0) {
             System.out.println("Aprovado");
         } else {
             System.out.println("Reprovado");
-            System.out.printf("Faltaram %.2f pontos%n ", estudante.pontosFaltantes());
+            System.out.printf("Faltaram %.2f pontos%n ", estudante.getPontosFaltantes());
         }
 
         sc.close();

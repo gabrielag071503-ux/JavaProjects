@@ -35,15 +35,15 @@ public class Estudante {
         this.nota3 = nota3;
     }
 
-    public float notaFinal() {
+    public float getNotaFinal() {
         return nota1 + nota2 + nota3;
     }
 
-    public double pontosFaltantes() {
-        if (notaFinal() < 60.0) {
-            return 60.0 - notaFinal();
+    public float getPontosFaltantes() {
+        if (getNotaFinal() < 60.0) {
+            return (float) (60.0 - getNotaFinal());
         } else {
-            return 0.0;
+            return (float) 0.0;
         }
     }
 
