@@ -8,15 +8,15 @@ public class Exerc_05 {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        System.out.println("Qual é o preço do Dólar? ");
-        double cotacao = sc.nextDouble();
+        System.out.print("Qual é o preço do Dólar? ");
+        double cotacaoDolar = sc.nextDouble();
 
-        System.out.println("Quantos Dólares serão comprados? ");
-        double quantia = sc.nextDouble();
+        System.out.print("Quantos Dólares serão comprados? ");
+        double quantidadeDolares = sc.nextDouble();
 
-        double totalReais = ConversorMoeda.valorEmReais(cotacao, quantia);
+        ConversorMoeda cm = new ConversorMoeda(cotacaoDolar, quantidadeDolares);
 
-        System.out.printf("Valor a ser pago em reais= R$ %.2f%n", totalReais);
+        System.out.print(cm);
 
         sc.close();
     }
