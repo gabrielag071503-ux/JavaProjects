@@ -14,13 +14,13 @@ public class Exerc_04 {
         String nome = sc.nextLine();
 
         System.out.print("nota1: ");
-        double nota1 = sc.nextDouble();
+        float nota1 = sc.nextFloat();
 
         System.out.print("nota2: ");
-        double nota2 = sc.nextDouble();
+        float nota2 = sc.nextFloat();
 
         System.out.print("nota3: ");
-        double nota3 = sc.nextDouble();
+        float nota3 = sc.nextFloat();
 
         Estudante estudante = new Estudante(nome, nota1, nota2, nota3);
 
