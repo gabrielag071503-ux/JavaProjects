@@ -1,6 +1,7 @@
 package entities_Lista02POO;
 
 public class ContaBancaria {
+    private static final double taxa = 5.00;
     private int numero;
     private String titular;
     private double saldo;
@@ -36,7 +37,7 @@ public class ContaBancaria {
     }
 
     public void sacar(double quantia) {
-        this.saldo -= quantia + 5.00;
+        this.saldo -= quantia + taxa;
     }
 
     public String toString() {
