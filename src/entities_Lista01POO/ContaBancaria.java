@@ -6,7 +6,7 @@ public class ContaBancaria {
     private double valorContaCorrente;
 
     public ContaBancaria() {
-        
+
     }
 
     public void abrirConta(String nomeTitular, int numeroConta, double depositoInicial) {
@@ -33,6 +33,11 @@ public class ContaBancaria {
         return numeroConta;
     }
 
+    public int setNumeroConta(int numeroConta) {
+        this.numeroConta = numeroConta;
+        return numeroConta;
+    }
+
     public double getValorContaCorrente() {
         return valorContaCorrente;
     }
@@ -46,7 +51,7 @@ public class ContaBancaria {
     }
 
     public void deposito(double valor) {
-        if(valor > 0) {
+        if (valor > 0) {
             valorContaCorrente += valor;
             System.out.printf("Deposito de R$ %.2f%n realizado com suceeso!", valor);
 
@@ -59,7 +64,8 @@ public class ContaBancaria {
         if (valor <= 0) {
             System.out.println("ERRO!O valor de saque deve ser maior que zero.");
         } else if (valor > valorContaCorrente) {
-            System.out.println("Erro!O valor atual é maior que seu saldo, seu saldo atual é de R$ " + String.format("%.2f", valorContaCorrente));
+            System.out.println("Erro!O valor atual é maior que seu saldo, seu saldo atual é de R$ "
+                    + String.format("%.2f", valorContaCorrente));
         } else {
             valorContaCorrente -= valor;
             System.out.printf("Saque de R$ %.2f%n realizado com sucesso!", valor);
