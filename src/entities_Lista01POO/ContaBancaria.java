@@ -5,11 +5,7 @@ public class ContaBancaria {
     private int numeroConta;
     private double valorContaCorrente;
 
-    public ContaBancaria() {
-
-    }
-
-    public void abrirConta(String nomeTitular, int numeroConta, double depositoInicial) {
+    public ContaBancaria(String nomeTitular, int numeroConta, double depositoInicial) {
         this.nomeTitular = nomeTitular;
         this.numeroConta = numeroConta;
         if (depositoInicial >= 0) {
@@ -18,25 +14,21 @@ public class ContaBancaria {
             this.valorContaCorrente = 0.0;
             System.out.println("Aviso: Saldo inicial não pode ser negativo,Saldo definido como R$ 0,00.");
         }
+
     }
 
     public String getNomeTitular() {
         return nomeTitular;
     }
 
-    public String setNomeTitular(String nomeTitular) {
+    public void setNomeTitular(String nomeTitular) {
         this.nomeTitular = nomeTitular;
-        return nomeTitular;
     }
 
     public int getNumeroConta() {
         return numeroConta;
     }
 
-    public int setNumeroConta(int numeroConta) {
-        this.numeroConta = numeroConta;
-        return numeroConta;
-    }
 
     public double getValorContaCorrente() {
         return valorContaCorrente;
@@ -69,6 +61,7 @@ public class ContaBancaria {
         } else {
             valorContaCorrente -= valor;
             System.out.printf("Saque de R$ %.2f%n realizado com sucesso!", valor);
+            System.out.printf("Seu saldo atual é de R$ %.2f%n", valorContaCorrente);
         }
     }
 }

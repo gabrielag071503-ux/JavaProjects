@@ -19,9 +19,7 @@ public class Exerc_05 {
         System.out.print("Informe o valor para deposito inicial(ou 0 para iniciar a conta zerada): ");
         double valor = sc.nextDouble();
 
-        ContaBancaria minhaConta = new ContaBancaria();
-
-        minhaConta.abrirConta(nome, numero, valor);
+        ContaBancaria minhaConta = new ContaBancaria(nome, numero, valor);
         System.out.println("A sua conta foi aberta com sucesso, BEM VINDO!");
 
         int opcao = 0;
