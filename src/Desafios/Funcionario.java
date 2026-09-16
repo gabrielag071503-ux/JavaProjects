@@ -11,7 +11,7 @@ public class Funcionario {
 
     public Funcionario(String nome, double salarioBruto, double descontoPlanoSaude) {
         this.nome = nome;
-        this.salarioBruto = salarioBruto;
+        this.setSalarioBruto(salarioBruto);
         this.descontoPlanoSaude = descontoPlanoSaude;
     }
 
