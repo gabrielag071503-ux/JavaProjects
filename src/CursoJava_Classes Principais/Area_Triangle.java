@@ -1,3 +1,5 @@
+ package CursoJava_ClassesPrincipais;
+
 import java.util.Locale;
 import java.util.Scanner;
 
