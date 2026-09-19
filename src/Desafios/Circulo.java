@@ -28,4 +28,8 @@ public class Circulo {
         return 2 * PI * raio;
     }
 
+    public double voumeEsfera() {
+        return (4.0 / 3.0) * PI * Math.pow(raio, 3);
+    }
+
 }
