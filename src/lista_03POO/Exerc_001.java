@@ -9,7 +9,7 @@ import entities_Lista03POO.Exerc_01.Cliente;
 import entities_Lista03POO.Exerc_01.ItemPedido;
 import entities_Lista03POO.Exerc_01.Pedido;
 
-public class Exerc_01 {
+public class Exerc_001 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -45,7 +45,6 @@ public class Exerc_01 {
 
             Produto produto = new Produto(nomeProduto, precoProduto);
             ItemPedido itemPedido = new ItemPedido(quantidadeProduto, precoProduto, produto);
-
 
             pedido.addItem(itemPedido);
         }
