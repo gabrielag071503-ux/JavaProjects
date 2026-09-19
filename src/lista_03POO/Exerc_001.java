@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities_Lista03POO.Exerc_01.Produto;
+import entities_Lista02POO.Produto;
 import entities_Lista03POO.Exerc_01.Cliente;
 import entities_Lista03POO.Exerc_01.ItemPedido;
 import entities_Lista03POO.Exerc_01.Pedido;
