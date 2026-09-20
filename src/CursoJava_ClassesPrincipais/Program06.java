@@ -12,11 +12,13 @@ public class Program06 {
 
         System.out.print("What is the dollar price? ");
         double cotacao = sc.nextDouble();
+        
         System.out.print("How many dollars will be bought? ");
         double quantidade = sc.nextDouble();
+
         double valorConvertido = ConversorDollar.converter(cotacao, quantidade);
         System.out.printf("Value to be paid in reais = %.2f%n", valorConvertido);
         sc.close();
     }
-    
+
 }
