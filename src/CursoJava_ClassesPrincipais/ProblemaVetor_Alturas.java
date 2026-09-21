@@ -39,15 +39,17 @@ public class ProblemaVetor_Alturas {
             if (idade[i] < 16) {
                 qtdMenores++;
             }
-            
+        }
+
+        for (int i = 0; i < n; i++) {
             alturaTotal += altura[i];
         }
 
         mediaAltura = alturaTotal / n;
-        percentualMenores = ((double) qtdMenores / n) * 100.00;
+        percentualMenores = qtdMenores * 100.0/ n;
 
         System.out.printf("\nAltura Média: %.2f", mediaAltura);
-        System.out.printf("\nPessoas com menos de 16 anos: %.1f%%", percentualMenores);
+        System.out.printf("\nPessoas com menos de 16 anos:  %.1f%%", percentualMenores);
 
         for (int i = 0; i < n; i++) {
             if (idade[i] < 16) {
