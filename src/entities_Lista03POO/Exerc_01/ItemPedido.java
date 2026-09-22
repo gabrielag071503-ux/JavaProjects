@@ -2,10 +2,10 @@ package entities_Lista03POO.Exerc_01;
 
 public class ItemPedido {
     private Integer quantidade;
-    private double preco;
+    private Double preco;
     private Produto produto;
 
-    public ItemPedido(Integer quantidade, double preco, Produto produto) {
+    public ItemPedido(Integer quantidade, Double preco, Produto produto) {
         this.quantidade = quantidade;
         this.preco = preco;
         this.produto = produto;

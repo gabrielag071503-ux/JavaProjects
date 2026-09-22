@@ -3,11 +3,13 @@ package CursoJava_Entities;
 public class Rent {
     private String name;
     private String email;
+    private Integer roomNumber;
 
 
-    public Rent(String name, String email) {
+    public Rent(String name, String email, Integer roomNumber) {
         this.name = name;
         this.email = email;
+        this.roomNumber = roomNumber;
     }
 
 
@@ -28,6 +30,14 @@ public class Rent {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(Integer roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
 

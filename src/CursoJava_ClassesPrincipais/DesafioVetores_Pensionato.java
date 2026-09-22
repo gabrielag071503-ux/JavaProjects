@@ -37,21 +37,19 @@ public class DesafioVetores_Pensionato {
                 roomNumber = sc.nextInt();
             }
 
-            room[roomNumber] = new Rent(name, email);
+            room[roomNumber] = new Rent(name, email, roomNumber);
 
         }
 
         System.out.println("\nBusy Rooms: ");
 
-        for (int i = 0; i < room.length; i++) {
-            if(room[i] != null) {
-                System.out.println(i + ": " + room[i]);
+        for (Rent obj : room) {
+            if(obj != null) {
+                System.out.println(obj.getRoomNumber() + ": " + obj);
             }
 
         }
-
-
-
+        
         sc.close();
     }
     
