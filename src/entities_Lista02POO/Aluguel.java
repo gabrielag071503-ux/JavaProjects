@@ -1,15 +1,15 @@
 package entities_Lista02POO;
 
 public class Aluguel {
-    private int quarto;
+    private Integer quarto;
     private Estudante3 estudante3;
 
-    public Aluguel(int numQuarto, Estudante3 estudante) {
+    public Aluguel(Integer numQuarto, Estudante3 estudante) {
         this.quarto = numQuarto;
         this.estudante3 = estudante;
     }
 
-    public int getQuarto() {
+    public Integer getQuarto() {
         return quarto;
     }
 

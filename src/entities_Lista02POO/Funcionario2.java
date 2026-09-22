@@ -1,17 +1,17 @@
 package entities_Lista02POO;
 
 public class Funcionario2 {
-    private int id;
+    private Integer id;
     private String nome;
-    private double salario;
+    private Double salario;
 
-    public Funcionario2(int id, String nome, double salario) {
+    public Funcionario2(Integer id, String nome, Double salario) {
         this.id = id;
         this.nome = nome;
         this.salario = salario;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -23,7 +23,7 @@ public class Funcionario2 {
         this.nome = nome;
     }
 
-    public double getSalario() {
+    public Double getSalario() {
         return salario;
     }
 
