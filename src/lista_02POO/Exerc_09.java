@@ -10,7 +10,7 @@ public class Exerc_09 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        List<Funcionario2> funcionarios = new ArrayList<>();
+        List<Funcionario2> list = new ArrayList<>();
 
         System.out.print("Quantos empregados serão cadastrados? ");
         int n = sc.nextInt();
@@ -19,23 +19,26 @@ public class Exerc_09 {
             System.out.println("\nEmpregado #" + i + ": ");
             System.out.print("ID: ");
             int id = sc.nextInt();
+            while (hasId(list, id)) {
+                System.out.println("Ja peguei esse Id.Tente Novamente: ");
+                id = sc.nextInt();
+
+            }
 
             System.out.print("Nome: ");
+            sc.nextLine();
             String nome = sc.nextLine();
 
             System.out.print("Salário: ");
             double salario = sc.nextDouble();
 
-            funcionarios.add(new Funcionario2(id, nome, salario));
+            list.add(new Funcionario2(id, nome, salario));
         }
 
         System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");
         int idAumento = sc.nextInt();
 
-        Funcionario2 emp = funcionarios.stream()
-                .filter(x -> x.getId() == idAumento)
-                .findFirst()
-                .orElse(null);
+        Funcionario2 emp = list.stream().filter(x -> x.getId() == idAumento).findFirst().orElse(null);
 
         if (emp == null) {
             System.out.println("Este id não existe!");
@@ -46,15 +49,16 @@ public class Exerc_09 {
         }
 
         System.out.println("\nLista de Empregados:");
-        for (Funcionario2 f : funcionarios) {
-            System.out.println(f);
+        for (Funcionario2 x : list) {
+            System.out.println(x);
         }
         sc.close();
 
     }
 
     public static boolean hasId(List<Funcionario2> list, int id) {
-        return list.stream().anyMatch(x -> x.getId() == id);
+        Funcionario2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return emp != null;
     }
 
 }

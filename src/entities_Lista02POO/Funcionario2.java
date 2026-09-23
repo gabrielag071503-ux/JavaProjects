@@ -27,7 +27,7 @@ public class Funcionario2 {
         return salario;
     }
 
-    public void aumentarSalario(double percentual) {
+    public void aumentarSalario(Double percentual) {
         this.salario += this.salario * (percentual/100.0);
     }
 
