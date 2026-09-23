@@ -17,13 +17,15 @@ public class ExercicioFixaçãoListas_forma2 {
         System.out.print("How many employees will be registered? ");
         int n = sc.nextInt();
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println("\nEmployee #" + (i + 1) + ": ");
             System.out.print("ID: ");
             Integer id = sc.nextInt();
+
             System.out.print("NAME: ");
             sc.nextLine();
             String name = sc.nextLine();
+            
             System.out.print("Salary: ");
             double salary = sc.nextDouble();
 
@@ -44,22 +46,21 @@ public class ExercicioFixaçãoListas_forma2 {
         }
 
         System.out.println("\nList of employes: ");
-        for(Employee2 obj : list) {
+        for (Employee2 obj : list) {
             System.out.println(obj);
         }
-
 
         sc.close();
 
     }
 
-    public static Integer hasId(List<Employee2> list, int id){
+    public static Integer hasId(List<Employee2> list, int id) {
         for (int i = 0; i < list.size(); i++) {
-            if(list.get(i).getId() == id) {
+            if (list.get(i).getId() == id) {
                 return i;
             }
         }
         return null;
     }
-    
+
 }
