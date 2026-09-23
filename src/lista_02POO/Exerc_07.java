@@ -36,17 +36,15 @@ public class Exerc_07 {
                 numeroQuarto = sc.nextInt();
 
             }
-            quartos[numeroQuarto] = new Estudante2(nome, email);
+            quartos[numeroQuarto] = new Estudante2(nome, email, numeroQuarto);
         }
 
         System.out.println("\nQuartos ocupados: ");
 
-        for (int i = 0; i < 10; i++) {
-            if (quartos[i] != null) {
-                System.out.println(i + ": " + quartos[i]);
-
+        for (Estudante2 obj : quartos) {
+            if (obj != null) {
+                System.out.println(obj.getNumQuarto() + ": " + obj);
             }
-
         }
 
         sc.close();
