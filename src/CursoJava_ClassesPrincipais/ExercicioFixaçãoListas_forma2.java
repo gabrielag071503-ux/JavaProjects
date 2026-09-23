@@ -25,7 +25,7 @@ public class ExercicioFixaçãoListas_forma2 {
             System.out.print("NAME: ");
             sc.nextLine();
             String name = sc.nextLine();
-            
+
             System.out.print("Salary: ");
             double salary = sc.nextDouble();
 
@@ -35,7 +35,7 @@ public class ExercicioFixaçãoListas_forma2 {
 
         System.out.print("\nEnter employee ID that will have salary increse: ");
         int idSalary = sc.nextInt();
-        Integer emp = hasId(list, idSalary);
+        Integer emp = position(list, idSalary);
 
         if (emp == null) {
             System.out.print("This ID does not exist!");
@@ -54,7 +54,7 @@ public class ExercicioFixaçãoListas_forma2 {
 
     }
 
-    public static Integer hasId(List<Employee2> list, int id) {
+    public static Integer position(List<Employee2> list, int id) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getId() == id) {
                 return i;
