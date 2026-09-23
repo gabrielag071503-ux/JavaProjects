@@ -1,11 +1,15 @@
 package CursoJava_Entities;
 
-public class Funcionario2 {
+public class Employee {
     private String name;
     private Integer id;
     private Double salary;
 
-    public Funcionario2(String name, Integer id, Double salary) {
+    public Employee() {
+
+    }
+
+    public Employee(String name, Integer id, Double salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
@@ -27,13 +31,16 @@ public class Funcionario2 {
         return salary;
     }
 
-    public void salaryIncrese(Double percentage) {
-        this.salary += salary * (percentage/100);
+    public void increaseSalary(double percentage) {
+        salary += salary * (percentage/100.00);
     }
 
     @Override
     public String toString() {
-        return getId() + ", " + name + ", " + String.format("%.2f", salary);
+        return id + ", " 
+        + name 
+        + ", " 
+        + String.format("%.2f", salary);
     }
 
     
