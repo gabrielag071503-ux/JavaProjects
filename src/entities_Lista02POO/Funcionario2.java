@@ -28,15 +28,11 @@ public class Funcionario2 {
     }
 
     public void aumentarSalario(Double percentual) {
-        this.salario += this.salario * (percentual/100.0);
+        this.salario += this.salario * (percentual / 100.0);
     }
 
     public String toString() {
         return id + ", " + nome + ", " + String.format("%.2f", salario);
     }
 
-
-
-
-    
 }
