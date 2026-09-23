@@ -36,9 +36,9 @@ public class Exerc_09 {
         }
 
         System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");
-        int idAumento = sc.nextInt();
+        int id = sc.nextInt();
 
-        Funcionario2 emp = list.stream().filter(x -> x.getId() == idAumento).findFirst().orElse(null);
+        Funcionario2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
 
         if (emp == null) {
             System.out.println("Este id não existe!");
