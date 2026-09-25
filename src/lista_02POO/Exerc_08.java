@@ -6,14 +6,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities_Lista02POO.Aluguel;
 import entities_Lista02POO.Estudante3;
 
 public class Exerc_08 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        List<Aluguel> alugueis = new ArrayList<>();
+        List<Estudante3> alugueis = new ArrayList<>();
 
         System.out.print("Quantos quartos serão alugados: ");
         int n = sc.nextInt();
@@ -28,21 +27,31 @@ public class Exerc_08 {
             String email = sc.nextLine();
 
             System.out.println("Quarto: ");
-            int quarto = sc.nextInt();
+            Integer numQuarto = sc.nextInt();
 
-            Estudante3 estudante3 = new Estudante3(nome, email);
-            Aluguel aluguel = new Aluguel(quarto, estudante3);
+            while (hasQuarto(alugueis, numQuarto)) {
+                System.out.print("O quarto informado está ocupado.Informe outro: ");
+                numQuarto = sc.nextInt();
+                
+            }
+
+            Estudante3 aluguel = new Estudante3(nome, email, numQuarto);
 
             alugueis.add(aluguel);
         }
 
-        alugueis.sort(Comparator.comparingInt(Aluguel::getQuarto));
+        alugueis.sort(Comparator.comparingInt(Estudante3::getNumQuarto));
 
         System.out.println("\nQuartos ocupados: ");
-        for (Aluguel a : alugueis) {
+        for (Estudante3 a : alugueis) {
             System.out.println(a);
         }
         sc.close();
 
+    }
+
+    public static boolean hasQuarto (List<Estudante3> list, Integer numQuarto) {
+        Estudante3 aluguel = list.stream().filter(x -> x.getNumQuarto() == numQuarto).findFirst().orElse(null);
+        return aluguel != null;
     }
 }

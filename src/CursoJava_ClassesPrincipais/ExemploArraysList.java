@@ -38,7 +38,7 @@ public class ExemploArraysList {
          * 5 da lista
          */
         System.out.println("______________________________");
-        list.remove(5);
+        list.remove(6);
         for (String obj : list) {
             System.out.println(obj);
         }
@@ -59,13 +59,13 @@ public class ExemploArraysList {
          */
         System.out.println("______________________________");
         System.out.println("IndexOF Joaquim: " + list.indexOf("Joaquim"));
-        System.out.println("IndexOF Joaquim: " + list.indexOf("Maria"));
+        System.out.println("IndexOF Maria: " + list.indexOf("Maria"));
 
         /*
          * Irá filtrar uma nova lista somente com Elementos que começem com a letra 'J'
          */
         System.out.println("________________________________");
-        List<String> result = list.stream().filter(x -> x.charAt(0) == 'J').collect(Collectors.toList());
+        List<String> result = list.stream().filter(x -> x.charAt(0) == 'G').collect(Collectors.toList());
         for (String x : result) {
             System.out.println(x);
         }
@@ -76,7 +76,7 @@ public class ExemploArraysList {
          * e em seguida irá mostrar na tela, senão irá mostrar na tela como 'null'
          */
         System.out.println("________________________________");
-        String name = list.stream().filter(x -> x.charAt(0) == 'J').findFirst().orElse(null);
+        String name = list.stream().filter(x -> x.charAt(0) == 'P').findFirst().orElse(null);
         System.out.println(name);
 
     }

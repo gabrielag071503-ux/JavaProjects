@@ -21,6 +21,10 @@ public class ExercicioFixaçãoListas_forma2 {
             System.out.println("\nEmployee #" + (i + 1) + ": ");
             System.out.print("ID: ");
             Integer id = sc.nextInt();
+            while(hasId(list, i)) {
+                System.out.print("I've already taken this ID; try another one: " );
+                id = sc.nextInt();
+            }
 
             System.out.print("NAME: ");
             sc.nextLine();
@@ -52,6 +56,11 @@ public class ExercicioFixaçãoListas_forma2 {
 
         sc.close();
 
+    }
+
+    public static boolean hasId(List <Employee2> list, int id) {
+        Employee2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return emp != null;
     }
 
     public static Integer position(List<Employee2> list, int id) {

@@ -32,7 +32,9 @@ public class Exerc_09 {
             System.out.print("Salário: ");
             double salario = sc.nextDouble();
 
-            list.add(new Funcionario2(id, nome, salario));
+            Funcionario2 emp = new Funcionario2(id, nome, salario);
+
+            list.add(emp);
         }
 
         System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");

@@ -3,10 +3,16 @@ package entities_Lista02POO;
 public class Estudante3 {
     private String nome;
     private String email;
+    private Integer numQuarto;
 
-    public Estudante3(String nome, String email) {
+    public Estudante3() {
+
+    }
+
+    public Estudante3(String nome, String email, Integer numQuarto) {
         this.nome = nome;
         this.email = email;
+        this.numQuarto = numQuarto;
     }
 
     public String getNome() {
@@ -25,8 +31,12 @@ public class Estudante3 {
         this.email = email;
     }
 
+    public Integer getNumQuarto() {
+        return numQuarto;
+    }
+
     public String toString() {
-        return nome + ", " + email;
+        return numQuarto + ": " + nome + ", " + email;
     }
 
 }
