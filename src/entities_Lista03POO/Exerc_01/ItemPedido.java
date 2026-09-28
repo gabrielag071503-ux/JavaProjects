@@ -11,14 +11,19 @@ public class ItemPedido {
         this.produto = produto;
     }
 
-    public double subTotal() {
-        double subTotal = preco * quantidade;
-        return subTotal;
+    public Double subTotal() {
+        return preco * quantidade;
     }
 
     @Override 
     public String toString() {
-        return produto.getNome() + ", R$ " + String.format("%.2f", preco) + ", Quantidade: " + quantidade + ", Subtotal: R$ " + String.format("%.2f", subTotal());
+        return produto.getNome() 
+        + ", R$ " 
+        + String.format("%.2f", preco) 
+        + ", Quantidade: " 
+        + quantidade 
+        + ", Subtotal: R$ " 
+        + String.format("%.2f", subTotal());
     }
     
 }

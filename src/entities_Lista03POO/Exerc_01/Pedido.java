@@ -1,18 +1,29 @@
 package entities_Lista03POO.Exerc_01;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
 
 public class Pedido {
+
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss" );
     private Date momento;
-    private String status;
+    private StatusPedido status;
     private Cliente cliente;
     private ArrayList<ItemPedido> itens = new ArrayList<>();
 
-    public Pedido(Date momento, String status, Cliente cliente) {
+    public Pedido(Date momento, StatusPedido status, Cliente cliente) {
         this.momento = momento;
         this.status = status;
         this.cliente = cliente;
+    }
+
+    public StatusPedido getStatus () {
+        return status;
+    }
+
+    public void setStatus (StatusPedido status) {
+        this.status = status;
     }
 
     public void addItem(ItemPedido item) {
@@ -33,17 +44,14 @@ public class Pedido {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Pedido:\n");
-        sb.append("Momento: " + momento + "\n");
-        sb.append("Status: " + status + "\n");
-        sb.append("Cliente: " + cliente.getNome() + " (" + cliente.getDataNascimento() + ") - " + cliente.getEmail() + "\n");
-        sb.append("Itens do pedido:\n");
+        String texto = "momento do Pedido: " + sdf.format(momento)+ "\n";
+        texto += "Status do Pedido: " + status + "\n";
+        texto += "Cliente: " + cliente.getNome() + " ( " + cliente.getDataNascimento() + " ) " + " - " + cliente.getEmail() + "\n";
+        texto += "Itens do Pedido: \n";
         for (ItemPedido item : itens) {
-            sb.append(item.toString() + "\n");
+            texto += item.toString() + "\n";
         }
-        sb.append("Total: R$ " + String.format("%.2f", total()));
-        return sb.toString();
+        return texto;
     }
 
     

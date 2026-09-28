@@ -51,7 +51,7 @@ public class Exerc_08 {
     }
 
     public static boolean hasQuarto (List<Estudante3> list, Integer numQuarto) {
-        Estudante3 aluguel = list.stream().filter(x -> x.getNumQuarto() == numQuarto).findFirst().orElse(null);
-        return aluguel != null;
+        Estudante3 alugueis = list.stream().filter(x -> x.getNumQuarto() == numQuarto).findFirst().orElse(null);
+        return alugueis != null;
     }
 }

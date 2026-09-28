@@ -1,14 +1,16 @@
 package entities_Lista03POO.Exerc_01;
 
+import java.util.Date;
+
 public class Cliente {
     private String nome;
     private String email;
-    private String dataNascimento;
+    private Date dataNascimento;
 
-    public Cliente(String nome, String email, String dataNascimento) {
+    public Cliente(String nome, String email, Date dataNascimento2) {
         this.nome = nome;
         this.email = email;
-        this.dataNascimento = dataNascimento;
+        this.dataNascimento = dataNascimento2;
     }
 
     public String getNome() {
@@ -23,7 +25,7 @@ public class Cliente {
         return email;
     }
 
-    public String getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
     

@@ -1,6 +1,7 @@
 package lista_02POO;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
@@ -40,7 +41,8 @@ public class Exerc_09 {
         System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");
         int id = sc.nextInt();
 
-        Funcionario2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        list.sort(Comparator.comparingInt(Funcionario2::getId));
+        Funcionario2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null); 
 
         if (emp == null) {
             System.out.println("Este id não existe!");
