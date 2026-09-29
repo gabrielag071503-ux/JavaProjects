@@ -35,9 +35,9 @@ public class Exerc_08 {
                 
             }
 
-            Estudante3 aluguel = new Estudante3(nome, email, numQuarto);
+            
 
-            alugueis.add(aluguel);
+            alugueis.add(new Estudante3(nome, email, numQuarto));
         }
 
         alugueis.sort(Comparator.comparingInt(Estudante3::getNumQuarto));

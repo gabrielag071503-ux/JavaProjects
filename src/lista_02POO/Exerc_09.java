@@ -41,7 +41,6 @@ public class Exerc_09 {
         System.out.print("Inform o ID do funcionario que terá o seu salário aumentado: ");
         int id = sc.nextInt();
 
-        list.sort(Comparator.comparingInt(Funcionario2::getId));
         Funcionario2 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null); 
 
         if (emp == null) {
@@ -51,6 +50,8 @@ public class Exerc_09 {
             double percentual = sc.nextDouble();
             emp.aumentarSalario(percentual);
         }
+
+        list.sort(Comparator.comparingInt(Funcionario2::getId));
 
         System.out.println("\nLista de Empregados:");
         for (Funcionario2 x : list) {
