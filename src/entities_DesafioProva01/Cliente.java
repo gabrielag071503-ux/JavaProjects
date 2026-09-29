@@ -27,11 +27,15 @@ public class Cliente {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
-    public String dataNascimento() {
+    public String getdataNascimento() {
         return dataNascimento;
     }
 
