@@ -27,4 +27,11 @@ public class Produto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+
+    @Override
+    public String toString() {
+        return  nome + ", R$" + String.format("%.2f", preco);
+    }
+
+    
 }

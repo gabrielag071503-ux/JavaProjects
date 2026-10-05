@@ -35,7 +35,7 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getdataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 

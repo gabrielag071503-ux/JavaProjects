@@ -63,12 +63,13 @@ public class NotaVenda {
     @Override
     public String toString() {
         String texto = "";
-        texto += "Momento do pedido: " + data + ", Número: " + numero + "\n" + cliente;
-        texto += "Itens do pedido: \n";
+        texto += "Momento do pedido: " + data + ", Número: " + numero + "\n";
+        texto += cliente + "\n";
+        texto += "Itens do pedido:\n";
         for (ItensNota item : itens) {
-            texto += item.toString();
+            texto += item + "\n";
         }
-        texto += "\nTotal da nota: R$" + String.format("%.2f", total());
+        texto += "Total da nota: R$" + String.format("%.2f", total());
         return texto;
     }
 

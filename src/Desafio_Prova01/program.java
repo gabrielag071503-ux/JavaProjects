@@ -24,7 +24,8 @@ public class program {
         Cliente cliente = new Cliente(nome, email, dataNascimento);
 
         System.out.println("\nInforme os Dados da Nota de vendas: ");
-        System.out.print("Qual a data da nota: ");
+        System.out.print("Qual a data da nota (DD/MM/YYY HH/mm/ss) : ");
+        sc.nextLine();
         String data = sc.next();
         System.out.println("Numero: ");
         int numero = sc.nextInt();

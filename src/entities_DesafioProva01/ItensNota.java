@@ -26,7 +26,7 @@ public class ItensNota {
         return preco;
     }
 
-    public Produto geProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
@@ -37,13 +37,10 @@ public class ItensNota {
 
     @Override
     public String toString() {
-        return "\nProduto: " 
-        + produto.getNome() 
-        + ", quantidae: " 
-        + quantidade 
-        + ", preço: " 
-        + preco 
-        + ", Valor: " 
+        return produto.getNome()
+        + ", R$ " + String.format("%.2f", preco)
+        + ", quantidade: " + quantidade 
+        + ", Subtotal:  R$ " 
         + String.format("%.2f", subTotal());
     }
 
